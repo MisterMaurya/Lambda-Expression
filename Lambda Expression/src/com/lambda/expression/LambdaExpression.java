@@ -2,8 +2,9 @@ package com.lambda.expression;
 
 import com.lambda.expression.functionalInterface.DisplaySomething;
 import com.lambda.expression.functionalInterface.Square;
+import com.lambda.expression.functionalInterface.Sum;
 
-public class LambdaExpression {
+public class LambdaExpression extends Object {
 
 	public static void main(String[] args) {
 
@@ -12,6 +13,11 @@ public class LambdaExpression {
 
 		Square square = n -> n * n;
 		System.out.println("Square : " + square.square(8));
+
+		Sum sum = (a, b) -> {
+			return a + b;
+		};
+		System.out.println("Sum : " + sum.sum(20, 30));
 
 	}
 
